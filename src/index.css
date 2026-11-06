@@ -1,0 +1,84 @@
+:root {
+  --ink: #141a22;
+  --ink-soft: #1c242f;
+  --orange: #e08a3c;
+  --orange-deep: #c8742b;
+  --orange-ink: #9a4518;
+  --copper: #b87333;
+  --paper: #ffffff;
+  --mist: #f4f5f7;
+  --text: #4a5160;
+  --text-strong: #1b2330;
+  --muted: #5c6574;
+  --line: #e6e8ec;
+  --hero-text: #f7f4ef;
+  --content: 1280px;
+  --gutter: 1.5rem;
+  --sans: 'Avenir Next', 'Segoe UI', 'Helvetica Neue', sans-serif;
+
+  font: 17px/1.6 var(--sans);
+  color: var(--text);
+  background: var(--ink);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px var(--ink);
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 40;
+  transform: translateY(-150%);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 700;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  transform: none;
+}

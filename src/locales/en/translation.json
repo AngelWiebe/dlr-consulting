@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "title": "DLR Consulting Ltd."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "whoWeWorkWith": "Who We Work With",
+    "paymentTerms": "Payment Terms",
+    "contact": "Contact",
+    "getInTouch": "Get in Touch",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "primary": "Primary",
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "eyebrow": "Professional Negotiation Solutions",
+    "titleLead": "Find a Better",
+    "titleAccent": "Outcome",
+    "titleEnd": "Together",
+    "body": "Professional negotiation support for individuals and businesses. Practical solutions, stronger relationships, and real results.",
+    "imageAlt": "Two people shaking hands across a conference table"
+  },
+  "servicesIntro": {
+    "eyebrow": "Our Services",
+    "title": "Practical Support for Real-World Challenges",
+    "intro": "Whether you’re facing a contract negotiation, a dispute, or a complex situation, we provide the guidance and representation you need to move forward."
+  },
+  "audience": {
+    "headline": "Professionals and Businesses Who Deliver Results",
+    "imageAlt": "A sunlit office desk with a notebook, pen, and laptop"
+  },
+  "coverage": {
+    "title": "Professional Coverage. Peace of Mind.",
+    "body": "We take our responsibilities seriously. DLR maintains professional coverage to protect our operations and provide clients with added confidence.",
+    "items": {
+      "wcb": "WCB Coverage",
+      "cyber": "Cyber Liability Insurance",
+      "liability": "Commercial General Liability",
+      "vehicle": "Commercial Vehicle Insurance"
+    }
+  },
+  "contact": {
+    "eyebrow": "Let’s Work Together",
+    "title": "Have a Question or Need Support?",
+    "body": "I’m here to help. Reach out to discuss your situation and see how we can work together.",
+    "callLabel": "Call",
+    "phone": "403-559-9799",
+    "emailLabel": "Email",
+    "email": "dlr.permit@gmail.com"
+  },
+  "footer": {
+    "rights": "© 2026 DLR Consulting Ltd. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "navigation": "Footer"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "updated": "Last Updated: October 2026",
+    "intro": "DLR Consulting Ltd. respects your privacy and is committed to protecting personal information in accordance with applicable privacy laws.",
+    "close": "Close",
+    "contact": {
+      "company": "DLR Consulting Ltd.",
+      "role": "Privacy Contact:",
+      "name": "Lance Gross",
+      "emailLabel": "Email:",
+      "email": "dlr.permit@gmail.com",
+      "phoneLabel": "Phone:",
+      "phone": "403-559-9799"
+    },
+    "sections": [
+      {
+        "id": "collect",
+        "title": "Information We Collect",
+        "paragraphs": [
+          "This website does not use contact forms, user accounts, advertising trackers, or analytics tools to collect personal information.",
+          "If you choose to contact DLR Consulting Ltd. by email, phone, or another method, we may receive personal information that you voluntarily provide, such as your name, contact information, and details about your inquiry."
+        ],
+        "items": [],
+        "after": []
+      },
+      {
+        "id": "use",
+        "title": "How We Use Your Information",
+        "paragraphs": [
+          "Information you provide directly to DLR Consulting Ltd. will be used only for reasonable business purposes, including responding to your inquiry, communicating with you, evaluating or establishing a client relationship, and providing requested services.",
+          "We do not sell or rent your personal information."
+        ],
+        "items": [],
+        "after": []
+      },
+      {
+        "id": "hosting",
+        "title": "Website Hosting",
+        "paragraphs": [
+          "This website is hosted using GitHub Pages. GitHub may process technical information associated with visits to websites hosted on its platform in accordance with its own privacy practices.",
+          "DLR Consulting Ltd. does not use this website to independently track visitors or create visitor profiles."
+        ],
+        "items": [],
+        "after": []
+      },
+      {
+        "id": "protecting",
+        "title": "Protecting Your Information",
+        "paragraphs": [
+          "DLR Consulting Ltd. takes reasonable measures to protect personal information in its possession and retains it only as long as reasonably necessary for the purposes for which it was collected or as required by law."
+        ],
+        "items": [],
+        "after": []
+      },
+      {
+        "id": "rights",
+        "title": "Your Privacy Rights",
+        "paragraphs": [
+          "You may contact us to ask about personal information DLR Consulting Ltd. holds about you or to request correction of inaccurate information, subject to applicable law."
+        ],
+        "items": [],
+        "after": []
+      },
+      {
+        "id": "changes",
+        "title": "Changes to This Policy",
+        "paragraphs": [
+          "This Privacy Policy may be updated if our website, business practices, or legal obligations change. The most recent version will be posted on this website."
+        ],
+        "items": [],
+        "after": []
+      }
+    ]
+  },
+  "sections": {
+    "professionalRepresentation": {
+      "title": "Professional Representation",
+      "paragraphs": [
+        "Having someone represent you can be challenging. It takes trust to let another person speak and act on your behalf. Yet, the benefits can be significant.",
+        "Leveraging another person’s strengths allows you to focus on yours, and that’s where the essence of leadership comes in.",
+        "It’s about having the confidence that your interests are represented by someone who is just as invested in your success as their own."
+      ]
+    },
+    "negotiations": {
+      "title": "Negotiations",
+      "paragraphs": [
+        "Break free from the hard bargaining approach and the idea that every negotiation has to have a winner and a loser.",
+        "Negotiations take time and personal investment, but they can also build strong alliances and lay the foundation for lasting relationships built on trust.",
+        "Allow me to help you build bridges that lead to mutual success."
+      ]
+    },
+    "conflictResolution": {
+      "title": "Conflict Resolution",
+      "paragraphs": [
+        "Conflict often arises from feeling misunderstood or taken advantage of. It comes with costs and consequences, and the more deeply rooted the disagreement, the greater those costs can become. The right approach can turn conflict into an opportunity for understanding, resolution, and progress."
+      ]
+    },
+    "whoWeWorkWith": {
+      "title": "Who We Work With",
+      "paragraphs": [
+        "We work with professionals and businesses who need the right person to solve problems, find a way forward, and deliver results.",
+        "We’re selective about who we work with. Our clients are ethical businesses that act with integrity, honour their commitments, and treat people fairly. We believe your word should still mean something.",
+        "That selectivity allows us to give our clients dedicated attention, build lasting relationships, and offer exclusive benefits and privileges."
+      ]
+    },
+    "paymentTerms": {
+      "title": "Payment Terms",
+      "lead": "Clear expectations. Fewer awkward follow-up emails.",
+      "subsections": [
+        {
+          "id": "no-credit-offered",
+          "title": "No Credit Offered",
+          "paragraphs": [
+            "We provide the service; we leave the lending to the banks. No credit or extended payment terms are offered."
+          ]
+        },
+        {
+          "id": "new-clients",
+          "title": "New Clients",
+          "paragraphs": [
+            "A non-refundable deposit is required before work begins. The remaining balance is due upon receipt of your invoice."
+          ]
+        },
+        {
+          "id": "existing-clients",
+          "title": "Existing Clients",
+          "paragraphs": [
+            "Invoices are issued on the 1st and 15th of each month, or upon completion of the work, with payment due upon receipt. Our billing schedule does not extend the payment due date."
+          ]
+        },
+        {
+          "id": "grace-period",
+          "title": "Grace Period & Late Payments",
+          "paragraphs": [
+            "We offer a five-business-day grace period after the invoice due date.",
+            "Starting the day after the grace period ends, any unpaid balance accrues interest at 18% per year (1.5% per month), calculated daily, until paid in full.",
+            "If payment remains outstanding after the grace period, ongoing work will be suspended until the account is paid in full. Late payments will also result in a review of the client relationship before further work is accepted."
+          ]
+        }
+      ],
+      "closing": "We appreciate your business and your prompt payment. Chasing invoices is surprisingly poor cardio."
+    }
+  }
+}
