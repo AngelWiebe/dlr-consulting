@@ -49,6 +49,9 @@ function App() {
   const [activeHref, setActiveHref] = useState('#home')
   const menuButtonRef = useRef<HTMLButtonElement>(null)
   const privacyButtonRef = useRef<HTMLButtonElement>(null)
+  const pendingHref = useRef<string | null>(null)
+  const settleTimer = useRef(0)
+  const settleNav = useRef<(delay: number) => void>(() => {})
 
   useEffect(() => {
     document.title = t('meta.title')
@@ -60,30 +63,72 @@ function App() {
       .map((item) => item.href.slice(1))
 
     function updateActiveSection() {
-      const rootFont = parseFloat(getComputedStyle(document.documentElement).fontSize) || 17
-      const marker = 5.1 * rootFont + 4
+      if (pendingHref.current) return
+      const header = document.querySelector('.site-header')
+      const headerBottom = header?.getBoundingClientRect().bottom ?? 0
+      const scrollPadding =
+        Number.parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0
+      const viewport = window.visualViewport
+      const offsetTop = viewport?.offsetTop ?? 0
+      const chrome = viewport
+        ? Math.max(0, window.innerHeight - viewport.height - offsetTop)
+        : 0
+      const marker = Math.max(headerBottom, scrollPadding + offsetTop) + Math.min(chrome, 120) + 8
       let current = sectionIds[0]
       for (const id of sectionIds) {
         const section = document.getElementById(id)
-        if (section && section.getBoundingClientRect().top <= marker) {
-          current = id
-        }
+        if (section && section.getBoundingClientRect().top <= marker) current = id
       }
       setActiveHref(`#${current}`)
     }
 
+    function releasePending() {
+      pendingHref.current = null
+      updateActiveSection()
+    }
+
+    function armSettle(delay: number) {
+      window.clearTimeout(settleTimer.current)
+      settleTimer.current = window.setTimeout(releasePending, delay)
+    }
+
+    settleNav.current = armSettle
+
+    function onScroll() {
+      if (pendingHref.current) armSettle(150)
+      else updateActiveSection()
+    }
+
+    function onScrollEnd() {
+      window.clearTimeout(settleTimer.current)
+      releasePending()
+    }
+
     updateActiveSection()
-    window.addEventListener('scroll', updateActiveSection, { passive: true })
+    window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('resize', updateActiveSection)
+    window.addEventListener('scrollend', onScrollEnd)
+    window.visualViewport?.addEventListener('resize', updateActiveSection)
+    window.visualViewport?.addEventListener('scroll', onScroll)
     return () => {
-      window.removeEventListener('scroll', updateActiveSection)
+      window.clearTimeout(settleTimer.current)
+      settleNav.current = () => {}
+      window.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', updateActiveSection)
+      window.removeEventListener('scrollend', onScrollEnd)
+      window.visualViewport?.removeEventListener('resize', updateActiveSection)
+      window.visualViewport?.removeEventListener('scroll', onScroll)
     }
   }, [])
 
   function goToSection(event: MouseEvent<HTMLAnchorElement>) {
     setMenuOpen(false)
     const id = event.currentTarget.hash.slice(1)
+    if (id && id !== 'contact') {
+      pendingHref.current = `#${id}`
+      setActiveHref(`#${id}`)
+      settleNav.current(900)
+    }
     const target = document.getElementById(id)
     const heading = target?.matches('h1, h2')
       ? target

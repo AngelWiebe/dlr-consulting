@@ -22,6 +22,22 @@ export function PrivacyPolicy({ open, onClose }: PrivacyPolicyProps) {
     }
   }, [open])
 
+  useEffect(() => {
+    const dialog = dialogRef.current
+    if (!open || !dialog) return
+    function onPointerDown(event: PointerEvent) {
+      const rect = dialog!.getBoundingClientRect()
+      const outside =
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+      if (outside) onClose()
+    }
+    document.addEventListener('pointerdown', onPointerDown, true)
+    return () => document.removeEventListener('pointerdown', onPointerDown, true)
+  }, [open, onClose])
+
   return (
     <dialog
       ref={dialogRef}
@@ -29,7 +45,13 @@ export function PrivacyPolicy({ open, onClose }: PrivacyPolicyProps) {
       aria-labelledby="privacy-title"
       onClose={onClose}
       onClick={(event) => {
-        if (event.target === event.currentTarget) onClose()
+        const rect = event.currentTarget.getBoundingClientRect()
+        const outside =
+          event.clientX < rect.left ||
+          event.clientX > rect.right ||
+          event.clientY < rect.top ||
+          event.clientY > rect.bottom
+        if (outside || event.target === event.currentTarget) onClose()
       }}
     >
       <div className="policy-scroll">
