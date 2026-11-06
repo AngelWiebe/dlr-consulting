@@ -1,32 +1,40 @@
-# React + TypeScript + Vite
+# DLR Consulting Ltd.
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Public website for DLR Consulting Ltd., a professional negotiation and representation practice.
 
-Currently, two official plugins are available:
+The site is a single page with sections for services, who the firm works with, professional coverage, payment terms, and contact. The privacy policy opens in a dialog.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Develop
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the local dev server |
+| `npm run build` | Typecheck and write a production build to `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run Oxlint |
+
+## Edit copy
+
+Visible text lives in `src/locales/en/translation.json`. `src/i18n.ts` loads that file and sets the document language. The browser title comes from `meta.title`.
+
+Section order and which copy keys each section uses are defined in `src/App.tsx`.
+
+## Layout
+
+- `src/App.tsx` — page sections and navigation
+- `src/App.css` — layout and section styles
+- `src/index.css` — color tokens and base styles
+- `src/PrivacyPolicy.tsx` — privacy policy dialog
+- `src/icons.tsx` — Lucide icons used on the page
+- `src/locales/en/translation.json` — site copy
+- `src/assets/` — logo and photography
+- `public/` — favicon
+
+## Stack
+
+React, TypeScript, Vite, i18next, and Lucide.
