@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type MouseEvent } from 'react'
 import { useTranslation } from 'react-i18next'
+import handshake from './assets/dlr-handshake.png'
 import logo from './assets/dlr-logo-bronze.png'
 import { Icon } from './icons'
 import { PrivacyPolicy } from './PrivacyPolicy'
@@ -169,6 +170,9 @@ function App() {
               <span>{t('hero.titleEnd')}</span>
             </h1>
             <p>{t('hero.body')}</p>
+          </div>
+          <div className="hero-media">
+            <img className="hero-photo" src={handshake} alt="" />
           </div>
         </section>
 
