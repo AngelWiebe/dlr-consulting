@@ -766,6 +766,10 @@
     background-position: center, center 55%;
   }
 
+  .audience::after {
+    content: none;
+  }
+
   .contact {
     background: #100c09;
   }
